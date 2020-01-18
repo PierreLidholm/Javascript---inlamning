@@ -1,0 +1,38 @@
+<table class="table tickets-table mb-2">
+    <thead>
+      <th class="text-muted pl-0">
+        Name
+      </th>
+      <th></th>
+      <th class="text-muted">
+        Date
+      </th>
+      <th class="text-muted">
+        Projects
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of tickets; let i = index">
+        <td class="pl-0">
+          <div class={{icons[i].ic}}>
+            <h4 class="font-weight-medium">{{initials[i]}}</h4>
+          </div>
+        </td>
+        <td>
+          <p class="mb-0">{{ticket.name}}</p>
+          <p class="text-muted mb-0">{{ticket.city}}</p>
+        </td>
+        <td>
+          <p class="mb-0">{{date[i]}}</p>
+          <p class="text-muted mb-0">{{time[i]}}</p>
+        </td>
+        <td>
+          <p class="mb-0">{{ticket.project}}</p>
+          <p class="text-muted mb-0">{{ticket.other}}</p>
+        </td>
+        <td class="pr-0">
+          <i class="mdi mdi-dots-horizontal icon-sm cursor-pointer"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
